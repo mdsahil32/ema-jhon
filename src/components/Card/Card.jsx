@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import OrderSum from '../OrderSum/OrderSum';
 import SingleCard from '../SingleCard/SingleCard';
 const Card = () => {
     const [data, setData] = useState([])
@@ -27,9 +28,8 @@ const Card = () => {
                 }
                      
             </div>
-            <div className='h-96 my-4 bg-orange-200 p-6  rounded-md mr-2'>
-                <h1 className='font-bold text-2xl mx-12'>Order Summary</h1>
-                <h4>Selected Items: {cart.length}</h4>
+            <div className='h-96 my-4 bg-orange-200 p-6  rounded-md mr-2 sticky top-0 ...'>
+                <OrderSum cart={cart}></OrderSum>
             </div>
         </div>
     );
